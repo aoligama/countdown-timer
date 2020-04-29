@@ -359,13 +359,61 @@ input {
 }
 
 @media (max-width: 1000px) {
-    .container {
-      flex-direction: column;
-    }
   
     .container .box {
         margin-left: 0;
-        margin-top: 30px;
+        margin-top: 5rem;
         width: 100%;
     }
-  }
+
+	.box-countdown{
+		margin-left: 160px !important;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.container .box {
+        margin-left: 0;
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+	.box-countdown{
+		margin-left: 60px !important;
+	}
+}
+
+@media (max-width: 535px) {
+	
+	.container .box {
+        margin-left: 0;
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+	.box-countdown{
+		margin-left: 30px !important;
+	}
+}
+
+@media (max-width: 464px) {
+  
+	.box-countdown{
+		margin-left: 20px !important;
+	}
+}
+
+@media (max-width: 436px) {
+  
+	.box-countdown{
+		margin-left: 2px !important;
+	}
+}
+
+@media (max-width: 383px) {
+  
+	.box-countdown{
+		margin-left: 0 !important;
+	}
+}

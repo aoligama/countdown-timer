@@ -1,79 +1,97 @@
-html {
-	font-size: 62.5%;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	line-height: 1rem;
-    letter-spacing: .08rem;
-    overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;   
+}
+
+a {
+    color: #FFF !important;
+    text-decoration: none;
+    width: 100%;
+    font-family: roboto, sans-serif !important;
 }
 
 body {
+	background-color: #E5E6F0 !important;
+	background-image: linear-gradient(to right, #3a539b, #4b77be);
+    -webkit-font-smoothing: antialiased;
+}
+
+body, input, a, label{
+    font-family: roboto, sans-serif !important;
+}
+
+input {
+	padding: 5px;
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: hidden;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.input-time {
+	height: 60px;
+	text-transform: uppercase;
+	border-radius: 10px;
+	text-align: center;
+	width: 50px;
+}
+
+.label-time {
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Baloo Paaji 2', cursive;
+	color: #2e3131;
+	margin-left: 0.45rem !important;
+}
+
+.box-countdown{
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: column;
-	font-size: 1.4rem;
-	font-weight: inherit;
-	background-color: #1fc69d;
-	height: 100vh;
-	width: 100vw;
+	flex-direction: row;
+	align-items: center !important;
+	background-color: transparent;
+	
 }
 
 .container {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	height: 20rem;
-	width: 60rem;
-	background-color: transparent;
-	border-radius: 3px;
-	box-shadow: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.clock-column {
-	margin-right: 7rem;
-	text-align: center;
-	position: relative;
+.box {
+    width: 400px;
+    background: #FFF;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px 20px;
 }
 
-.clock-column:last-child {
-	margin-right: 0;
+.hidden { 
+    display:none; 
 }
 
-.clock-label {
-	padding-top: 10px;
-	text-transform: uppercase;
-	color: #131313;
-	font-size: 14px;
-	text-align: center;
-	border-top: 1px solid rgba(19, 19, 19, 0.5);
+.box strong {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+	color: #333;
+	margin-bottom: 1rem; 
 }
 
-.clock-timer {
-	color: #131313;
-	font-size: 36px;
-	line-height: 1;
-}
-.clock-input {
-	clear: both;
-	text-align: center;
-	max-width: 500px;
-	width: 100%;
-	margin: 0 auto 10px;
-}
-input#time-to {
-	padding: 5px;
-	border: 0;
-	border-radius: 3px;
-	font-size: 16px;
-	font-family: monospace;
-	text-align: center;
-	color: #010101;
-	background-color: #fff;
-}
-.done {
-	color: #fff;
-	font-weight: 600;
-}

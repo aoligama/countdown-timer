@@ -1,4 +1,3 @@
-// load event listeners
 loadEventListeners();
 
 function loadEventListeners() {
@@ -11,7 +10,6 @@ var timeTo = document.getElementById('time-to').value,
 		newYear = new Date('1.1.2020').getTime(),
 		startTimer = '';
 
-// calculate date, hour, minute and second
 function calcTime(dates) {
 	//ui variables
 	clearInterval(startTimer);
@@ -33,19 +31,18 @@ function calcTime(dates) {
 		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-		// select element
-		document.querySelector('.clock-day').innerHTML = days;
-		document.querySelector('.clock-hours').innerHTML = hours;
-		document.querySelector('.clock-minutes').innerHTML = minutes;
-		document.querySelector('.clock-seconds').innerHTML = seconds;
+		$('#days').val(days);
+		$('#hours').val(hours);
+		$('#minutes').val(minutes);
+		$('#seconds').val(seconds);
 
         
 		if(now >= date){
 			clearInterval(startTimer);
-			document.querySelector('.clock-day').innerHTML = 'D';
-			document.querySelector('.clock-hours').innerHTML = 'O';
-			document.querySelector('.clock-minutes').innerHTML = 'N';
-			document.querySelector('.clock-seconds').innerHTML = 'E';
+			$('#days').val('D');
+			$('#hours').val('O');
+			$('#minutes').val('N');
+			$('#seconds').val('E');
 		}
 	}
 

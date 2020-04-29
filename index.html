@@ -6,8 +6,17 @@
 		<script src="js/app.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js.map"></script>
 	</head>
     <body>
+	<div class="pyro hidden">
+    	<div class="before"></div>
+    	<div class="after"></div>
+	</div>
 		<div class="container">
             <div class="box">
                 <strong>CountDown</strong>
@@ -19,39 +28,36 @@
 					</div>
 					<br />
 					<div class="row">
-						<div class="col-12">
-							<input type="date" id="time-to" onchange="calcTime(this.value)">
+						<div class="col-8">
+							<input type="date" id="time-to" onchange="stopFireworks()">
+						</div>
+						<div class="col-4">
+							<a class="btn btn-success col-12" onclick="calcTime()"><i class="fas fa-stopwatch"></i></a>
 						</div>
 					</div>
 					<br />
-					<div class="row box-countdown" >
-						<div class="col-12">
-							<input type="text" disabled id="days" class="input-time"/>&nbsp;:&nbsp;
-							<input type="text" disabled id="hours" class="input-time"/>&nbsp;:&nbsp;
-							<input type="text" disabled id="minutes" class="input-time"/>&nbsp;:&nbsp;
-							<input type="text" disabled id="seconds" class="input-time"/>
+					<center>
+						<div class="row box-countdown" >
+							<div class="col-12">
+								<input type="text" disabled id="days" class="input-time"/>&nbsp;:&nbsp;
+								<input type="text" disabled id="hours" class="input-time"/>&nbsp;:&nbsp;
+								<input type="text" disabled id="minutes" class="input-time"/>&nbsp;:&nbsp;
+								<input type="text" disabled id="seconds" class="input-time"/>
+							</div>
 						</div>
-					</div>
-					<div class="row box-countdown" >
-						<div class="col-12">
-							<span class="label-time">Days</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<span class="label-time">Hours</span>&nbsp;&nbsp;&nbsp;&nbsp;
-							<span class="label-time">Minutes</span>&nbsp;&nbsp;
-							<span class="label-time">Seconds</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					</center>
+						<div class="row box-countdown" >
+							<div class="col-12">
+								<span class="label-time">Days</span>
+								<span class="label-time">Hours</span>
+								<span class="label-time">Minutes</span>
+								<span class="label-time">Seconds</span>
+							</div>
 						</div>
-					</div>
 					
 				</div>
 			</div>
         </div>
-        <!--<div class="row clock-input">
-			<div class="col-4">&nbsp;</div>
-			<div class="col-4">
-				<input type="date" name="time-to" class="form-control time-to" id="time-to" value="" onchange="calcTime(this.value)">
-			</div>
-			<div class="col-4">&nbsp;</div>
-		</div>
-		
-		-->
+      
     </body>
 </html>

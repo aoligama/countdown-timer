@@ -398,6 +398,12 @@ input {
 }
 
 @media (max-width: 464px) {
+
+	.container .box {
+        margin-left: 0;
+        margin-top: 5rem;
+        width: 100%;
+    }
   
 	.box-countdown{
 		margin-left: 20px !important;
@@ -405,6 +411,12 @@ input {
 }
 
 @media (max-width: 436px) {
+
+	.container .box {
+        margin-left: 0;
+        margin-top: 5rem;
+        width: 100%;
+    }
   
 	.box-countdown{
 		margin-left: 2px !important;
@@ -412,6 +424,12 @@ input {
 }
 
 @media (max-width: 383px) {
+
+	.container .box {
+        margin-left: 0;
+        margin-top: 5rem;
+        width: 100%;
+    }
   
 	.box-countdown{
 		margin-left: 0 !important;
